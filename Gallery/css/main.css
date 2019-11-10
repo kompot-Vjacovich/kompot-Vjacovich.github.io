@@ -76,7 +76,7 @@ rotate - поворот, пример: rotate(30deg)
 	}
 }
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1290px) {
 	.img-link:hover {
 		transform: scale(1.2);
 		z-index: 10;
