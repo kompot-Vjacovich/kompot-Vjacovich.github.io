@@ -37,6 +37,43 @@
 	.logo, .search-wrapper, .topnav {
 		display: inline-block;
 	}
+	.header-btn {
+		width: 90vw;
+		height: 60px;
+		margin-top: 15px;
+	}
+	.header-btn + .header-btn {
+		margin-left: 0;
+	}
+	.h1 {
+		font-size: 8vw;
+	}
+
+	.first-box {
+		flex-wrap: wrap;
+		margin-top: 50px;
+	}
+	.first-item, .second-item {
+		width: 90%;
+		margin: 20px auto;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	.p {
+		width: 85%;
+	}
+
+}
+
+
+/*@media all and (max-width: 768px) {
+	.nav-wrapper {
+		overflow: auto;
+		white-space: nowrap;
+	}
+	.logo, .search-wrapper, .topnav {
+		display: inline-block;
+	}
 
 	h1 {
 		font-size: 8vw;
@@ -57,4 +94,4 @@
 		width: 90%;
 		margin: 20px auto;
 	}
-}
+}*/
