@@ -1,11 +1,11 @@
 @media all and (min-width: 1150px) {
-	.tsp:hover {
+	.transparent:hover {
 		background-color: #00897b;
 		border-color: transparent;
 	}
 	.green:hover {
 		background-color: transparent;
-		border: 2px solid;
+		border: 3px solid;
 	}
 	.nav-link:hover {
 		background-color: black;
@@ -21,7 +21,6 @@
 
 	.second-item:hover .readmore {
 		color: white;
-		border-color: white;
 	}
 
 	.second-item:hover .icon {
@@ -37,6 +36,9 @@
 	.logo, .search-wrapper, .topnav {
 		display: inline-block;
 	}
+	.h1 {
+		font-size: 8vw;
+	}
 	.header-btn {
 		width: 90vw;
 		height: 60px;
@@ -45,53 +47,20 @@
 	.header-btn + .header-btn {
 		margin-left: 0;
 	}
-	.h1 {
-		font-size: 8vw;
-	}
 
-	.first-box {
-		flex-wrap: wrap;
-		margin-top: 50px;
-	}
-	.first-item, .second-item {
+	.second-item, .first-item {
 		width: 90%;
 		margin: 20px auto;
 		padding-left: 10%;
 		padding-right: 10%;
 	}
-	.p {
-		width: 85%;
-	}
-
-}
-
-
-/*@media all and (max-width: 768px) {
-	.nav-wrapper {
-		overflow: auto;
-		white-space: nowrap;
-	}
-	.logo, .search-wrapper, .topnav {
-		display: inline-block;
-	}
-
-	h1 {
-		font-size: 8vw;
-	}
-	.header-btn {
-		width: 90vw;
-		height: 60px;
-		margin-top: 15px;
-	}
-	.header-btn + .header-btn {
-		margin-left: 0;
-	}
 
 	.first-box {
+		margin-top: 50px;
 		flex-wrap: wrap;
 	}
-	.first-item, .second-item {
-		width: 90%;
-		margin: 20px auto;
+
+	.section-subtitle {
+		width: 80%;
 	}
-}*/
+}

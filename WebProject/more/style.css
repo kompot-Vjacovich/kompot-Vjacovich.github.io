@@ -21,10 +21,9 @@ html {
 
 .h1 {
 	font-size: 5rem;
-	line-height: 5rem;
 	position: absolute;
-	left: 80px;
-	bottom: -5px;
+	left: 90px;
+	bottom: -9px;	
 }
 
 .main {
