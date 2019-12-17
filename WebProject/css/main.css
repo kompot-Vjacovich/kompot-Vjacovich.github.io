@@ -237,6 +237,7 @@ html {
 
 .tab, .tab-title {
 	display: inline-block; 
+	cursor: pointer;
 }
 
 .tab input[type="radio"] { display: none; }
@@ -271,9 +272,48 @@ html {
 	z-index: 1;
 }
 
-.tab :checked + .tab-title + .tab-content {
-	display: block; 
+#tab1:checked ~ #txt1,
+#tab2:checked ~ #txt2,
+#tab3:checked ~ #txt3 { display: block; }
+
+
+.tabs { 
+	width: 60%; 
+	padding: 0px; 
+	margin: auto; 
+	margin-top: 80px;
 }
+.tabs>input { display: none; }
+
+.content {
+    display: none;
+    padding: 12px;
+    margin-top: 30px;
+}
+
+.tabs>label {
+    display: inline-block;
+    background-color: white;
+	font-size: 2rem;
+	border: 2px solid #00897b;
+	vertical-align: middle;
+	padding: 5px 10px;
+	margin-left: 30px;
+    cursor: pointer;
+}
+
+.tabs>input:checked + label {
+    background-color: #00897b;
+	border-color: #00897b;
+	color: white;
+	z-index: 1;
+}
+
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4 { display: block; }
+
 
 .galery-box {
 	display: flex;
@@ -287,7 +327,6 @@ html {
 	margin-top: 3%;
 }
 
-/*
 .contact {
 	display: block;
 	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../img/header.jpg);
@@ -351,4 +390,4 @@ html {
 	border: none;
 	float: right;
 	margin-top: 20px;
-}*/
+}
