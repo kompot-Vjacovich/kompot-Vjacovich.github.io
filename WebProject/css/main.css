@@ -298,8 +298,15 @@ html {
 	border: 2px solid #00897b;
 	vertical-align: middle;
 	padding: 5px 10px;
-	margin-left: 30px;
+	width: 25%;
     cursor: pointer;
+}
+
+.tabs>label[for="tab_2"] {
+	margin-left: 20px;
+}
+.tabs>label[for="tab_3"] {
+	margin-left: 20px;
 }
 
 .tabs>input:checked + label {
