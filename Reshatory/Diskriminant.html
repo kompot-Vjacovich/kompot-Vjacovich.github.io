@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Дискриминант</title>
+</head>
+<body>
+	<script>
+		alert("Данная программа решает квадратное уравнение вида: ах²+bx+c=0. Введите a, b и с.");
+
+		const a = +prompt("Введите а...");
+		const b = +prompt("Введите b...");
+		const c = +prompt("Введите c...");
+
+		let answer = confirm("Ваше уравнение: " + a + "х²+" + b + "x+" + c + "=0 ?");
+
+		if(answer) {
+			let D = b*b - 4*a*c;
+			let sqrt = Math.sqrt(D);
+			let x1 = (-b+sqrt)/(2*a);
+			let x2 = (-b-sqrt)/(2*a);
+
+			alert("Решение уравнения:" + a + "х²+" + b + "x+" + c + "=0\n" + "x1 = " + x1 + "\nx2 = " + x2);
+		}
+		else {
+			alert("Перезагрузи страницу и введи данные заново!");
+		}
+	</script>
+</body>
+</html>
