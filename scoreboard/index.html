@@ -12,15 +12,7 @@
     </style>
 </head>
 <body>
-    <select id="name">
-        <option disabled selected>Выберите ученика</option>
-        <option>Богдан</option>
-        <option>Влад</option>
-        <option>Денис</option>
-        <option>Никита</option>
-    </select>
-    <input type="number" id="mark" min="-10" max="10">
-    <input type="submit" id="send" onclick="addPoint()">
+	<input type="file" id="files" onchange="readFile(this)">
 
     <div id="names">
         
@@ -28,15 +20,36 @@
 
 
     <script>
-        
-        function compare(a, b) {
-            if (a.score > b.score) return -1;
-            if (a.score <= b.score) return 1;
-        }
+    	function readFile(input) {
+			let file = input.files[0];
+
+			let reader = new FileReader();
+
+			reader.readAsText(file);
+
+			reader.onload = function() {
+				let arr = reader.result.split(" ");
+				for (var i = 0; i < student.length; i++) {
+					student[i].score = parseInt(arr[i]);
+				}
+
+				addSelect();
+				update();
+				$('#files').remove();
+			};
+
+			reader.onerror = function() {
+				console.log(reader.error);
+			};
+		}
+
+		function addSelect() {
+			$("#files").after('<select id="name"><option disabled selected>Выберите ученика</option><option>Богдан</option><option>Влад</option><option>Денис</option><option>Никита</option></select><input type="number" id="mark" min="-10" max="10"><input type="submit" id="send" onclick="addPoint()"><input type="button" value="Сохранить" id="save" onclick="save()">');
+		}
+
 
         function update() {
-            student.sort(compare);
-
+        	$('#names').empty();
             for (let i = 0; i < student.length; i++) {
                 $('#names').append("<h1>" + student[i].name + ' ' + student[i].score + "</h1>");
                 //append score bar 
@@ -49,12 +62,23 @@
             let index = student.findIndex(s => s.name == Name);
 
             let point = $('#mark').val();
-            student[index].score = point;
+            student[index].score += parseInt(point);
 
             update();
+            $('#mark').val('');
+            $('select option:first').prop('selected', true);
         }
 
-        
+        function save() {
+        	let csv = '';
+        	for (var i = 0; i < student.length - 1; i++) {
+        		csv += student[i].score + ' ';
+        	}
+        	csv += student[student.length - 1].score;
+            let csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+            
+            window.open(csvData);
+        }
 
 
         let student = [];
@@ -69,7 +93,6 @@
         student[2].score = 0;
         student[3].score = 0;
 
-        window.onload = update()
     </script>
 </body>
 </html>
