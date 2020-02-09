@@ -1,24 +1,56 @@
 function getName() {
-	let name = prompt("Введите своё имя...");
+	let name = $('#name').val();
 
 	if (name == "" || name == null) {
 		name = "Ученик";
 	}
-
-	alert(name + ", нажми ОК чтобы начать тест.");
 	
 	// Удаляем всё что внутри тега body
 	$('body').empty();
-	return name
+
+	hi(name);
 }
 
+
+function hi(name) {
+	$('body').prepend('<h2>'+name+', если ты готов начать тестирование, нажми СТАРТ</h2>');
+	$('h2').after('<button onclick="test()">СТАРТ</button>');
+}
+
+let questions = ["2+2=", "3+2=", "да"];
+let answers = ["четыре", "пять", "нет"];
+let score = 0;
+
 function test() {
-	const name = getName();
+	$('body').empty();
+	$('body').append('<h2></h2>');
+	$('body').append('<input type="text">');
+	$('body').append('<button onclick="check()">Ответить</button>');
 
-	const questions = ["2+2=", "3+2="];
-	const answers = ["четыре", "пять"];	
+	$('h2').text(questions[0])
+}
 
-	let score = 0;
+function check() {
+	let otvet = $('input').val().toLowerCase();
+
+	if(otvet == answers[0]) {
+		score++;
+	}
+	// Удалить первый элемент массива
+	questions.shift();
+	answers.shift();
+
+	if (questions.length != 0) {
+		$('h2').text(questions[0]);
+		$('input').val('');
+	}
+	else {
+		theEnd();
+	}
+}
+
+function test1() {	
+
 	for(let i = 0; i < questions.length; i++) {
 		let q = questions[i];
 		let a = answers[i];

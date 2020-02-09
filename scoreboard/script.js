@@ -3,14 +3,13 @@ function readFile(input) {
 
 	let reader = new FileReader();
 
-	reader.readAsText(file, 'windows-1251');
+	reader.readAsText(file, 'KOI-8r');
 
 	reader.onload = function(e) {
 		let str = reader.result.split("\n");
-		
-		let arr = [];
+		console.log(str)
 		str.forEach(function(val, index){
-			arr[index] = val.split(' '); 
+			arr[index] = val.split('_'); 
 		});
 		
 		for (var i = 0; i < arr.length; i++) {
@@ -46,15 +45,9 @@ function update() {
         $('#names').append('<div class="foo"><span class="bar" id="b'+i+'"></span></div>');
         // doesn't work
         let len = student[i].score;
-        let width = calcWidth(len);
-        $('#b'+i).width(width);
+        $('#b'+i).width(len+'%');
     }
     
-}
-
-function calcWidth(len) {
-	let parentWidth = $('.foo').offsetParent().width();
-	let width = parentWidth*len/100;
 }
 
 function addPoint() {
@@ -72,12 +65,13 @@ function addPoint() {
 function save() {
 	let csv = '';
 	for (var i = 0; i < student.length - 1; i++) {
-		csv += student[i].score + ' ';
+		csv += arr[i][0] + "_" + student[i].score + '\n';
 	}
-	csv += student[student.length - 1].score;
-    let csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+	csv += arr[i][0] + "_" + student[student.length - 1].score;
+    let csvData = 'data:application/csv;charset=KOI-8r,' + csv;
     
     window.open(csvData);
 }
 
 let student = [];
+let arr = [];
