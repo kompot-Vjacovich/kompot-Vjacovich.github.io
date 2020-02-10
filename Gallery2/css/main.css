@@ -25,25 +25,3 @@ body {
 .img-link + .img-link {
 	margin: 5px 0;
 }
-
-.img-link:hover {
-	transition: 1s;
-	/*Размытие*/
-	/*filter: blur(2px);*/
-	/*Яркость*/
-	/*filter: brightness(150%);*/
-	/*Контрастность*/
-	/*filter: contrast(1.4);*/
-	/*Отбрасывание тени*/
-	/*filter: drop-shadow(-50px 0 2px red);*/
-	/*Перевод в чёрно-белое*/
-	/*filter: grayscale(1.5)*/
-	/*Меняет цвета изображения в зависимости от цветового круга*/
-	/*filter: hue-rotate(45deg);*/
-	/*Делает негатив изображения*/
-	/*filter: invert(1.5);*/
-	/*Насыщенность цветов*/
-	/*filter: saturate(5);*/
-	/*Сепия(эффект старины)*/
-	/*filter: sepia(1.5);*/
-}

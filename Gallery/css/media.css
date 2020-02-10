@@ -1,0 +1,20 @@
+@media all and (max-width: 1111px) {
+	.img_link {
+		max-width: initial;
+		max-height: initial;
+		width: 95vw;
+		height: calc(100vw/ 16*9);
+		margin: 5px 0;
+	}
+} 
+
+@media all and (min-width: 1200px) {
+	/*Псевдокласс, который появляется при наведении на него курсора*/
+	.img_link:hover {
+		/*Непрозрачность*/
+		/*opacity: 1;*/
+		transform: scale(0.5) rotate(-15deg) translate(-200px, -100px);
+		/*Плавность анимации*/
+		transition: 2s;
+	}
+} 

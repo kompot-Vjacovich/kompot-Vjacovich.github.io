@@ -32,18 +32,9 @@ body {
 	display: block;
 	max-height: 500px;
 	max-width: 490px;
-	width: calc(50% - 10px);
+	width: calc(95vw / 2 - 10px);
 	height: calc(90vh / 16*9);
 	margin: 5px;
 
 	transition: 1.5s;
-}
-
-/*Псевдокласс, который появляется при наведении на него курсора*/
-.img_link:hover {
-	/*Непрозрачность*/
-	/*opacity: 1;*/
-	transform: scale(0.5) rotate(-15deg) translate(-200px, -100px);
-	/*Плавность анимации*/
-	transition: 2s;
 }
