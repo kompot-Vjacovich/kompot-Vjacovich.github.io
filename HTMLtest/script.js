@@ -1,5 +1,5 @@
 function getName() {
-	let name = $('#name').val();
+	name = $('#name').val();
 
 	if (name == "" || name == null) {
 		name = "Ученик";
@@ -20,6 +20,8 @@ function hi(name) {
 let questions = ["2+2=", "3+2=", "да"];
 let answers = ["четыре", "пять", "нет"];
 let score = 0;
+let name;
+const len = questions.length;
 
 function test() {
 	$('body').empty();
@@ -75,4 +77,8 @@ function start() {
 	$('body').append('<input type="submit" id="send">');
 	// Задаём аттрибуту onclick значение "название функции"
 	$('#send').attr('onclick', 'getName()');
+}
+
+function theEnd() {
+	$('body').empty().append('<h1>' name + ', вы набрали ' + score + '/' + len + ' баллов.'</h1>')
 }
