@@ -31,28 +31,27 @@
 			<legend>Персональная информация</legend>
 
 			<label for="age">Дата рождения<em>*</em></label>
-			<input type="date" id="age" min="1900-01-01" max=""><br>
+			<input type="date" id="age" min="1900-01-01" max="" required><br>
 
 			<label for="">Пол</label>
-
 			<label for="gender1"><input type="radio" id="gender1" name="gender">Мужской</label>
 			<label for="gender2"><input type="radio" id="gender2" name="gender">Женский</label>
 			<label for="gender3"><input type="radio" id="gender3" name="gender" checked>Другой</label>
 			<br>
 
 			<label for="city">Ваш город</label>
-			<select name="" id="city">
-				<option value="empty" selected disabled>Выберете ваш город</option>
+			<select id="city">
+				<option value="empty" disabled selected>Выберете ваш город</option>
 				<option value="Simf">Симферополь</option>
 				<option value="Moscow">Москва</option>
 				<option value="Spb">Санкт-Петербург</option>
+				<option value="Yalta">Ялта</option>
 			</select>
 			<br>
 
 			<label for="about">Расскажите о себе</label>
-			<textarea id="about" placeholder="I am pretty cool"></textarea>			
+			<textarea id="about" placeholder="I am pretty cool"></textarea>
 		</fieldset>
-
 		<fieldset>
 			<legend>Выберете игры, в которые вы играли</legend>
 			<label for="CS"><input type="checkbox" id="CS">CS:GO</label>
@@ -65,6 +64,14 @@
 			<label for="HL"><input type="checkbox" id="HL">Half-Life</label>
 			<label for="PL"><input type="checkbox" id="PL">Portal</label>
 			<label for="GTA"><input type="checkbox" id="GTA">GTA</label>
+		</fieldset>
+		<fieldset>
+			<legend>Дополнительно</legend>
+			<label for="photo">Фото профиля<em>*</em></label>
+			<input type="file" id="photo" accept="image/*" required>
+			<br>
+			<label for="color">Выберите цвет обводки</label>
+			<input type="color" id="color">
 		</fieldset>
 		<p><input type="submit" value="Отправить информацию" onclick="main()"></p>
 	</form>
