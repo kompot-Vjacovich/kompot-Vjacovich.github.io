@@ -13,11 +13,11 @@ html {
 }
 
 .nav-container {
-	position: absolute;
+	position: fixed;
 	height: 100px;
-	padding: 0 100px;
 	display: flex;
 	width: 100%;
+	padding: 0 3%;
 	-ms-align-items: center;
 	align-items: center;
 	justify-content: space-between;
@@ -34,17 +34,21 @@ html {
 .nav-link {
 	text-decoration: none;
 	color: black;
-	display: inline-block;
 	font-size: 1.5rem;
-}
-
-.nav-link + .nav-link {
-	margin-left: 5%;
+	/*Пробеды между буквами*/
+	letter-spacing: 0.5px;
+	padding: 10px 15px;
 }
 
 .logo {
 	font-size: 2.2rem;
 	font-weight: bold;
+	width: 200px;
+}
+
+.search-container {
+	width: 15%;
+	margin-left: 5px;
 }
 
 #search {
@@ -56,6 +60,11 @@ html {
 	padding-left: 20px;
 	font-size: 1.5rem;
 	outline: none; 
+	width: 90%;
+}
+
+#search:focus {
+	border-bottom: 1px solid black;
 }
 
 .header {
@@ -87,12 +96,53 @@ html {
 	z-index: 10;
 	text-align: center;
 	color: white;
+	margin-top: 170px;
 }
 
 h1 {
 	font-size: 5rem;
+	letter-spacing: 1px;
 }
 
 p {
 	font-size: 1.6rem;
+	padding: 2rem 0;
+	letter-spacing: 0.5px; 
 }
+
+.header-btn {
+	width: 200px;
+	height: 60px;
+	font-size: 1.6rem;
+	margin-top: 60px;
+	border-radius: 10px;
+	outline: none;
+	/*Все буквы заглавные*/
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.7px;
+	
+}
+
+.green {
+	/*Отступ правой кнопки от левой*/
+ 	margin-left: 30px;
+ 	background-color: #00897b;
+ 	border: 2px solid #00897b;
+ 	color: white;
+ }
+
+ .tsp {
+ 	background-color: white;
+ 	border: 2px solid white;
+ 	color: #00897b;
+ }
+
+ .down-arrow {
+ 	display: block;
+ 	margin-top: 170px;
+ }
+
+ .down-arrow>img {
+ 	width: 24px;
+ }

@@ -23,38 +23,6 @@ window.onload = function() {
     // Если какая-то нажата, то запускаем функцию checkKey
     window.onkeydown = checkKey;
 
-    function drawMaze2(coord_x, coord_y) {
-        // Остановить таймер, если он запущен
-        clearTimeout(timer)
-        // Остановить перемещение персонажа
-        dx = 0;
-        dy = 0;
-
-        // Изменяем размер холста в соответствии
-        // с размером лабиринта
-
-        canvas.drawLine({
-            strokeStyle: 'black',
-            strokeWidth: 5,
-            x1: 100, y1: 200,
-            x2: 300, y2: 200
-        });
-
-        // Рисуем персонажа
-        canvas.drawImage({
-            source: 'https://professorweb.ru/my/html/html5/level4/files/face.png',
-            // Рисуем в начальном положении
-            x: coord_x,
-            y: coord_y,
-            // Размеры персонажа
-            width: 20, height: 20
-        });
-
-        // Рисуем следующий кадр
-        // через каждые 10 миллисекунд
-        timer = setTimeout(drawFrame, 15);
-    }
-
     // Функция для отрисовки лабиринта
     function drawMaze(mazeFile, startingX, startingY) {
         // Остановить таймер, если он запущен
