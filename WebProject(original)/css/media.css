@@ -1,0 +1,100 @@
+@media all and (min-width: 1150px) {
+	.transparent:hover {
+		background-color: #00897b;
+		border-color: transparent;
+	}
+	.green:hover {
+		background-color: transparent;
+		border: 3px solid;
+	}
+	.nav-link:hover {
+		background-color: black;
+		color: white;
+	}
+
+	.second-item:hover {
+		background-color: #00897b;
+		color: white;
+		transform: scale(1.05);
+		box-shadow: 0 0 40px 5px rgba(0,0,0,0.3);
+	}
+
+	.second-item:hover .readmore {
+		color: white;
+	}
+
+	.second-item:hover .icon {
+		fill: white;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.nav-wrapper {
+		overflow: auto;
+		white-space: nowrap;
+	}
+	.logo, .search-wrapper, .topnav {
+		display: inline-block;
+	}
+	.h1 {
+		font-size: 8vw;
+	}
+	.header-btn {
+		width: 90vw;
+		height: 60px;
+		margin-top: 15px;
+	}
+	.header-btn + .header-btn {
+		margin-left: 0;
+	}
+
+	.second-item, .first-item {
+		width: 90%;
+		margin: 20px auto;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	
+	.first-box, /*new*/.contact-box {
+		margin-top: 50px;
+		flex-wrap: wrap;
+	}
+
+	.section-subtitle {
+		width: 80%;
+	}
+
+	/*Урок 12*/
+	.tabs>label {
+		width: 100%;
+		height: 60px;
+		margin-top: 15px;
+	}
+	.tabs>label[for="tab_2"] {
+		margin-left: 0;
+	}
+	.tabs>label[for="tab_3"] {
+		margin-left: 0;
+	}
+	.img {
+		width: 100%;
+	}
+	.tabs {
+		width: 90vw;
+	}
+	.form>input {
+		width: 90vw;
+		margin-top: 15px;
+	}
+}
+/*Урок 12*/
+@media all and (max-width: 907px) and (min-width: 769px) {
+	.tabs>label[for="tab_3"] {
+		width: calc(50% + 20px);
+		margin-top: 15px;
+		margin-left: 0;
+	}
+	.img {
+		width: 45%;
+	}
+}

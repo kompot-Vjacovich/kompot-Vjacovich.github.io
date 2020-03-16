@@ -9,6 +9,30 @@ window.onload = function() {
 		return Math.sqrt((difX*difX)+(difY*difY))
 	}
 
+	function getHint(distance) {
+		if (distance < 50) {
+			return 'Сейчас сгоришь'
+		}
+		if (distance < 100) {
+			return 'Очень горячо'
+		}
+		if (distance < 200) {
+			return 'Горячо'
+		}
+		if (distance < 400) {
+			return 'Тепло'
+		}
+		if (distance < 600) {
+			return 'Холодно'
+		}
+		if (distance < 800) {
+			return 'Очень холодно'
+		}
+		if (distance >= 800) {
+			return 'Сейчас замёрзнешь'
+		}
+	}
+
 	let width = $('#map').width()
 	let height = $('#map').height()
 	let clicks = 0;
@@ -28,5 +52,9 @@ window.onload = function() {
 		// Получаем расстояние до места клика
 		let distance = getDistance(event, target)
 		let hint = getHint(distance);
+		$('#heading').text(hint);
+		if (distance < 15) {
+			location.reload()
+		}
 	});
 }

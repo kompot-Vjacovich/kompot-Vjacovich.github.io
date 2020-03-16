@@ -1,6 +1,5 @@
 canvas {
-	border: 6px double black;
-	background: white;
+	background: #eee;
 }
 img {
 	display:none;
