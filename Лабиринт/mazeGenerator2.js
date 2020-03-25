@@ -9,7 +9,7 @@ function mapGen(canvas, w, h, steps, mazes) {
             dy = 0;
         }
         else {
-            document.querySelector("#step").innerHTML = Math.floor(document.querySelector("#step").innerHTML) + 1;
+            $("#step").text(Math.floor(+$("#step").text()) + 1);
         }
         // Закрашиваем персонажа
         ctx.clearRect(13 * x + 3, 13 * y + 3, 10, 10); 
@@ -26,8 +26,8 @@ function mapGen(canvas, w, h, steps, mazes) {
     canvas = document.querySelector(canvas);
     var ctx = canvas.getContext("2d");
     // И вписываем количество шагов и пройденных лабиринтов
-    document.querySelector("#step").innerHTML = Math.floor(steps);
-    document.querySelector("#complete").innerHTML = Math.floor(mazes);
+    $("#step").text(Math.floor(steps));
+    $("#complete").text(Math.floor(mazes));
     // Зададим ширину и высоту области лабиринта
     canvas.width = 13 * w + 3;
     canvas.height = 13 * h + 3;
@@ -71,14 +71,13 @@ function mapGen(canvas, w, h, steps, mazes) {
     // Рисуем выход из лабиринта
     ctx.clearRect(13 * w, 3, 15, 10);
     // Обнуляем текущие координаты персонажа
-    var x = 0,
-        y = 0;
+    let x = 0, y = 0;
     // Задаем крассный цвет
     ctx.fillStyle = "red";
     // И ставим персонажа в начало лабиринта
     character(-1, -1);
     // Ожидаем нажатия стрелок
-    document.body.onkeydown = function (a) {
+    window.onkeydown = function (a) {
         36 < a.keyCode && 41 > a.keyCode && character((a.keyCode - 38) % 2, (a.keyCode - 39) % 2)
     }
 }
