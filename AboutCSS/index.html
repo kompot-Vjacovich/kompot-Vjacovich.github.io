@@ -4,6 +4,27 @@
 	<meta charset="UTF-8">
 	<title>CSS селекторы</title>
 	<link rel="stylesheet" href="style.css">
+	<style>
+		table {
+			border: 5px solid black;
+			border-collapse: collapse;
+			width: 70%;
+			margin: auto;
+			margin-top: 20px;
+		}
+		td, th {
+			border: 2px solid black;
+			padding: 7px;
+		}
+
+		th {
+			background-color: green;
+		}
+
+		#t1 + tr>td:nth-child(2){
+			color: green;
+		}
+	</style>
 </head>
 <body>
 	<table>
@@ -78,13 +99,5 @@
 			<td>Выбирает третий элемент, который лежит внутри &ltdiv&gt</td>
 		</tr>
 	</table>
-	<br>
-	<ol>
-		<li>Стилизировать шрифты и границы таблицы</li>
-		<li>Сделать цвет текста красный для элемента с id="t5"</li>
-		<li>Сделать заливку синей для второго элемента столбца</li>
-		<li>Сделать заливку розовой для 3-й ячейки строки с id="t3"</li>
-		<li>Сделать заливку жёлтой для вторых столбцов всех строк после 8-й</li>
-	</ol>
 </body>
 </html>

@@ -6,7 +6,10 @@
 	-moz-box-sizing: border-box;
 }
 
-html, body, header {height: 100%}
+html, body, header {
+	height: 100%;
+	scroll-behavior: smooth;
+}
 html {
 	font-size: 10px;
 	font-family: 'Open Sans', sans-serif;
