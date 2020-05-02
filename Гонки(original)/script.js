@@ -22,6 +22,7 @@ class Road
 		if(this.y > window.innerHeight) //if the image left the screen, it will change it's position
 		{
 			this.y = road.y - canvas.width + speed; //New position depends on the second Road object
+			console.log(canvas.width, canvas.height)
 		}
 	}
 }
