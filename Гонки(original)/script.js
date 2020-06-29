@@ -15,8 +15,6 @@ window.onresize = function() {
 	scale = canvas.width/15000;
 
 	player.x = canvas.width*oldX/100;
-	player.x = canvas.width*oldX/100;
-	player.y = canvas.height*oldY/100;
 	player.y = canvas.height*oldY/100;
 	Draw()
 }
@@ -70,7 +68,7 @@ class Car {
  
     Move(dx, dy) {
     	//Смещение по X
-        this.x += speed*dx*2;
+        this.x += speed*dx;
         //Если при смещении объект выходит за края холста, то изменения откатываются
         if(this.x + this.image.width*scale > canvas.width) {
             this.x = canvas.width - this.image.width*scale; 
