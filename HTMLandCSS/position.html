@@ -4,17 +4,102 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
+	<title>Свойство position</title>
+	<style>
+		#container {
+			width: 80%;
+			margin: auto;
+		}
+		#header, #footer {
+			width: 100%;
+			background-color: indigo;
+			color: white;
+		}
+		#content {
+			width: 100%;
+			background-color: sandybrown;
+			position: relative;
+		}
+		#div1 {
+			margin: 0 25px;
+			height: 30px;
+			background-color: lightseagreen;
+			position: static;
+		}
+		#div2 {
+			margin: 0 25px;
+			height: 50px;
+			background-color: firebrick;
+			/*Относительно обычного расположения*/
+			position: relative;
+			/*left, right, top, bottom*/
+			left: 100px;
+			/*top: 50px;*/
+		}
+		#div3 {
+			margin: 0 25px;
+			height: 35px;
+			background-color: orangered;
+			/*Абсолютное позиционирование*/
+			position: absolute;
+			left: 300px;
+			right: 20px;
+		}
+		#div4 {
+			margin: 0 25px;
+			height: 55px;
+			background-color: lemonchiffon;
+		}
+		#div5 {
+			margin: 0 25px;
+			height: 40px;
+			background-color: teal;
+		}
+	</style>
 </head>
 <body>
 	<!-- Шапка сайта -->
 	<header>
 		<a href="justify-content.html"><img id="left" src="https://pngimage.net/wp-content/uploads/2018/06/%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B0-%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-png-1.png" alt="Левая стрелка"></a>
-		<h1>Основные HTML теги</h1>
+		<h1>Свойство position</h1>
 		<a href="index.html"><img id="right" src="https://pngimage.net/wp-content/uploads/2018/06/%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B0-%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-png-1.png" alt="Правая стрелка"></a>
 	</header>
 	<main>
-		
+		<div id="container">
+			<div id="header">id="header"</div>
+			<!-- div#content>div#div$*5 -->
+			<div id="content">id="content"
+				<div id="div1">id="div1"</div>
+				<div id="div2">id="div2"</div>
+				<div id="div3">id="div3"</div>
+				<div id="div4">id="div4"</div>
+				<div id="div5">id="div5"</div>
+			</div>
+			<div id="footer">id="footer"</div>
+		</div>
+
+		<h1>Итого:</h1>
+
+		<h2>static</h2>
+		<p>Иначе называетс "без позиционирования".</p>
+
+		<h2>relative</h2>
+		<p>Сдвигает элемент относительно текущего места</p>
+		<ul>
+			<li>Противоположные границы left/right(top/bottom) одновременно указать нельзя.</li>
+			<li>Окружающие элементы ведут себя так, будто элемент никуда не сдвигался.</li>
+		</ul>
+
+		<h2>absolute</h2>
+		<p>Визуально переносит элемент на новое место. <br> Новое место вычисляется по координатам left/top/right/bottom относительно ближайшего позиционированного родителя. Если такого родителя нет, то им считается окно.</p>
+		<ul>
+			<li>Ширина элемента по умолчанию устанавливается по содержимому.</li>
+			<li>Можно указать одновременно противоположные границы left/right(top/bottom). Элемент при этом растянется.</li>
+			<li>Окружающие элементы заполняют освободившееся место.</li>
+		</ul>
+
+		<h2>fixed</h2>
+		<p>Подвид абсолютного позиционирования, при котором элемент привязывается к координатам окна, а не документа. При прокрутке остаётся на том же месте.</p>
 	</main>
 </body>
 </html>
