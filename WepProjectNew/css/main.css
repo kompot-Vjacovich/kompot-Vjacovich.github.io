@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	/*Способ рассчёта размера элементов*/
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html, body, header {
+	height: 100%;
+}
+
+html {
+	/*Размер шрифта*/
+	font-size: 10px;
+	/*Шрифт*/
+	font-family: 'Oswald', sans-serif;
+}
+
+.logo {
+	font-size: 3rem;
+	/*Толщины шрифта*/
+	font-weight: bold;
+	width: 200px;
+}
+
+.nav-container {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	height: 100px;
+	width: 100%;
+	padding: 0 3%;
+	align-items: center;
+	-ms-align-items: center;
+	background-color: white;
+	z-index: 1000;
+}
+
+.topnav {
+	width: 70%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	-ms-align-items: center;
+}
+
+.nav-link {
+	color: black;
+	font-size: 2rem;
+	padding: 10px 15px;
+	/*Расстояние между буквами*/
+	letter-spacing: 0.5px;
+	/*Декорация текста*/
+	text-decoration: none;
+}
+
+.search-container {
+	width: 15%;
+	margin-left: 5px; 
+}
+
+#search {
+	background-image: url(../img/search.png);
+	background-position: 0 center;
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	font-size: 2rem;
+	width: 90%;
+	border: none;
+	/*Внешняя линия у input*/
+	outline: none;
+}
+
+.header {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/background.jpg);
+	background-repeat: no-repeat;
+	height: calc(100%-100px);
+	/*Размер фона растягивается по размеру элемента*/
+	background-size: cover;
+	-webkit-background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-ms-align-items: center;
+	position: relative;
+}
+
+.box {
+	/*Выдвинуть ближе к экрану (пользователю)*/
+	z-index: 10;
+	/*Выравнивание текста по центру*/
+	text-align: center;
+	color: white;
+}
+
+.box>h1 {
+	font-size: 5rem;
+	letter-spacing: 1px;
+}
+
+.box>p {
+	font-size: 1.6rem;
+	letter-spacing: 0.5px;
+	padding: 2rem 0;
+}
+
+.header-btn {
+	width: 250px;
+	height: 60px;
+	font-size: 1.6rem;
+	margin-top: 60px;
+	border-radius: 10px;
+	outline: none;
+	letter-spacing: 0.5px;
+	/*Все буквы заглавные*/
+	text-transform: uppercase;
+	/*"Жирность" текста*/
+	font-weight: bold;
+}
+
+.down-arrow {
+	position: absolute;
+	bottom: 10px;
+}
+
+.down-arrow>img {
+	width: 24px;
+}
