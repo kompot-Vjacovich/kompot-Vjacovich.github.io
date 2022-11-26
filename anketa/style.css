@@ -1,0 +1,82 @@
+body {
+	padding: 0;
+	box-sizing: border-box;
+}
+
+form {
+	width: 70%;
+	margin: auto;
+}
+
+h1, h1+p {
+	text-align: center;
+	font-family: 'Russo One', sans-serif;
+}
+
+h1 {margin-bottom: 0;}
+
+h1+p {
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
+legend {font-family: 'Russo One', sans-serif;}
+
+fieldset {
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+em {
+	color: red;
+	font-weight: bold;
+}
+
+label {
+	width: 150px;
+	display: inline-block;
+	margin: 7px;
+	font-family: 'Kelly Slab';
+	vertical-align: top;
+}
+
+#games {
+	width: 100%;
+	text-align: center;
+}
+
+input {
+	width: 300px;
+	margin: 7px;
+}
+
+select {margin: 7px}
+
+input[type="radio"], input[type="checkbox"] {width: 20px}
+
+input[type="date"] {width: 100px}
+
+input[type="time"],
+input[type="color"] {width: 70px}
+
+input[type="range"] {width: 70%;}
+
+textarea {
+	width: 70%;
+	height: 100px;
+	resize: none;
+	margin: 7px;
+}
+
+input[type="text"], 
+input[type="email"],
+textarea {padding: 2px 0.5em;}
+
+input[type="submit"] {
+	font-size: 1.5rem;
+	margin: 10px 0;
+	padding: 0.5rem 1rem;
+	width: 100%;
+
+	background: #6495ED;
+}

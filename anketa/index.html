@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Чемпионат</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Russo+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="icon.png">
+</head>
+<body>
+	<form action="" autocomplete="on">
+		<h1>Форма заявки на киберчемпионат</h1>
+		<p><i>Поля помеченные <em>*</em> обязательные к заполнению.</i></p>
+
+		<fieldset>
+			<legend>Контактная информация</legend>
+
+			<label for="surname">Фамилия<em>*</em></label>
+			<input type="text" id="surname" required><br>
+
+			<label for="name">Имя<em>*</em></label>
+			<input type="text" id="name" required><br>
+
+			<label for="phone">Телефон</label>
+			<input type="text" id="phone" placeholder="79781234567"><br>
+
+			<label for="email">E-mail<em>*</em></label>
+			<input type="email" id="email" required placeholder="example@ya.ru"><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Персональная информация</legend>
+
+			<label for="age">Дата рождения<em>*</em></label>
+			<input type="date" id="age" required min="1900-01-01" max="2010-01-01"><br>
+
+			<label for="">Пол</label>
+			<label for="gender1"><input type="radio" id="gender1" name="gender">Мужской</label>
+			<label for="gender2"><input type="radio" id="gender2" name="gender">Женский</label>
+			<label for="gender3"><input type="radio" id="gender3" name="gender" checked>Другой</label><br>
+
+			<label for="city">Ваш город</label>
+			<select id="city">
+				<option value="empty" disabled selected>Выберете ваш город</option>
+				<option value="simf">Симферополь</option>
+				<option value="sevas">Севастополь</option>
+				<option value="yalta">Ялта</option>
+				<option value="kerch">Керчь</option>
+			</select>
+			<br>
+
+			<label for="about">Расскажите о себе</label>
+			<textarea id="about" placeholder="Мне нравится..."></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Игровой опыт</legend>
+
+			<label for="exp">Игровой уровень</label>
+			<input type="range" min="0" max="100">
+			<br>
+
+			<label id="games" for="">Выберете игры, в которые играли</label><br>
+			<label for="game1"><input type="checkbox" id="game1">Call of Duty</label>
+			<label for="game2"><input type="checkbox" id="game2">Dota 2</label>
+			<label for="game3"><input type="checkbox" id="game3">CS:GO</label>
+			<label for="game4"><input type="checkbox" id="game4">Farcry</label>
+			<label for="game5"><input type="checkbox" id="game5">Batllefield</label>
+			<label for="game6"><input type="checkbox" id="game6">Fortnite</label>
+			<label for="game7"><input type="checkbox" id="game7">Assasins Creed</label>
+			<label for="game8"><input type="checkbox" id="game8">Apex Legends</label>
+			<label for="game9"><input type="checkbox" id="game9">WOW</label>
+			<label for="game10"><input type="checkbox" id="game10">Minecraft</label>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Дополнительно</legend>
+
+			<label for="photo">Фото профиля<em>*</em></label>
+			<input type="file" id="photo" accept="image/*" required><br>
+
+			<label for="color">Цвет обложки профиля</label>
+			<input type="color" id="color"><br>
+
+			<label for="time">Удобное время начала турнира</label>
+			<input type="time">
+		</fieldset>
+		<input type="submit" value="Принять участие в турнире">
+	</form>
+</body>
+</html>
