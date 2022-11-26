@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Wiki</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/icon.png">
+	<style>
+		tr:nth-child(5) > td:nth-child(3) {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<!-- Шапка сайта -->
+	<header>
+		<a href="colors.html"><img class="arrow" src="images/left_arrow.png" alt="Стрелка влево"></a>
+		<h1>CSS селекторы</h1>
+		<a href="units.html"><img class="arrow" src="images/right_arrow.png" alt="Стрелка вправо"></a>
+	</header>
+
+	<!-- Основная часть сайта -->
+	<main>
+		<table>
+			<tr>
+				<th>CSS селектор</th>
+				<th>Пример</th>
+				<th>Описание</th>
+			</tr>
+			<tr>
+				<td>.class</td>
+				<td>.myClass</td>
+				<td>Выбирает все элементы, у которых <i>class="myClass"</i></td>
+			</tr>
+			<tr>
+				<td>#id</td>
+				<td>#myId</td>
+				<td>Выбирает элемент, у которого <i>id="myId"</i></td>
+			</tr>
+			<tr>
+				<td>*</td>
+				<td>*</td>
+				<td>Выбирает ВСЕ элементы</td>
+			</tr>
+			<tr>
+				<td>тег</td>
+				<td>div</td>
+				<td>Выбирает все теги <i>&ltdiv&gt</i></td>
+			</tr>
+			<tr>
+				<td>элемент, элемент</td>
+				<td>div, h2</td>
+				<td>Выбирает все элементы <i>&ltdiv&gt</i> и все элементы &lth2&gt</td>
+			</tr>
+			<tr>
+				<td>[атрибут]</td>
+				<td>[href]</td>
+				<td>Выбирает все элементы, у которых есть атрибут href</td>
+			</tr>
+			<tr>
+				<td>[атрибут="значение"]</td>
+				<td>[href="https://yandex.ru"]</td>
+				<td>Выбирает все элементы, у которых атрибут href ТОЧНО совпадает с указанным значением</td>
+			</tr>
+			<tr>
+				<td>[атрибут~="значение"]</td>
+				<td>[href~="yandex.ru"]</td>
+				<td>Выбирает все элементы с атрибутом href, в значении которого (в любом месте) встречается подстрока "yandex.ru" в виде отдельного слова</td>
+			</tr>
+			<tr>
+				<td>[атрибут*="значение"]</td>
+				<td>[href*="yandex.ru"]</td>
+				<td>Выбирает все элементы с атрибутом href, в значении которого (в любом месте) встречается подстрока "yandex.ru" в виде отдельного слова или его части</td>
+			</tr>
+			<tr>
+				<td>элемент>элемент</td>
+				<td>div>p</td>
+				<td>Выбирает все элементы <i>&ltp&gt</i> внутри <i>&ltdiv&gt</i></td>
+			</tr>
+			<tr>
+				<td>элемент+элемент</td>
+				<td>div+p</td>
+				<td>Выбирает все элементы <i>&ltp&gt</i>, которые расположены сразу после элемента <i>&ltdiv&gt</i></td>
+			</tr>
+			<tr>
+				<td>элемент~элемент</td>
+				<td>p~div</td>
+				<td>Выбирает все элементы <i>&ltdiv&gt</i>, которые расположены сразу перед элементом <i>&ltp&gt</i></td>
+			</tr>
+			<tr>
+				<td>элемент:nth-child(номер)</td>
+				<td>td:nth-child(1)</td>
+				<td>Выбирает все элементы <i>&lttd&gt</i>, которые первые в своей группе</td>
+			</tr>
+		</table>
+	</main>
+</body>
+</html>

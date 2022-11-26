@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Wiki</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/icon.png">
+</head>
+<body>
+	<!-- Шапка сайта -->
+	<header>
+		<a href="flex.html"><img class="arrow" src="images/left_arrow.png" alt="Стрелка влево"></a>
+		<h1>Позиционирование</h1>
+		<a href="index.html"><img class="arrow" src="images/right_arrow.png" alt="Стрелка вправо"></a>
+	</header>
+
+	<!-- Основная часть сайта -->
+	<main>
+		<h2>position: static (по умолчанию)</h2>
+		<p>Статическое позиционирование, используется как значение по умолчанию.</p>
+		<div style="background: #fae; width: 500px;">
+			Без позиционирования ("position:static").
+
+			<h3 style="background: #aef; margin: 0;">Заголовок</h3>
+			<div>А тут всякий разный текст... <br>... В две строки</div>
+		</div>
+
+		<h2>position: relative</h2>
+		<p>Относительное позиционирование сдвигает элемент относительно его обычного положения. Для того чтобы сдвинуть элемент, необходимо задать свойство <b>position: relative</b> и воспользоваться координатами <b>left/right/top/bottom</b>.</p>
+
+		<div style="background: #fae; width: 500px;">
+			Заголовок сдвинут на 10px вниз и на 5px вправо.
+
+			<h3 style="background: #aef; margin: 0; position: relative; top: 10px; left: 5px">Заголовок</h3>
+			<div>А тут всякий разный текст... <br>... В две строки</div>
+		</div>
+
+		<h2>position: absolute</h2>
+		<ol>
+			<li>Элемент исчезает с того места, где он должен быть и позиционируется заново. Остальные элементы, располагаются так, как-будто этого элемента никогда и не было.</li>
+			<li>Координаты left/right/rop/bottom отсчитываются от ближайшего позиционированного родителя (родителя с позиционированием отличным от static). Если такого родителя нет - то относительно документа.</li>
+			<li>Ширина элемента устанавливается по содержимому.</li>
+			<li>Элемент получает <b>display: block</b></li>
+		</ol>
+		<div style="background: #fae; width: 500px; position: relative">
+			Заголовок в правом-верхнем углу документа.
+
+			<h3 style="background: #aef; margin: 0; position: absolute; top: 0; right: 0;">Заголовок</h3>
+			<div>А тут всякий разный текст... <br>... В две строки</div>
+		</div>
+
+		<h2>position: fixed</h2>
+		<p>Позиционирует объекты точно так же, как и absolute, но относительно окна.</p>
+		<div style="background: #fae; width: 500px;">
+			Заголовок позиционируется относительно окна.
+
+			<h3 style="background: #aef; margin: 0; position: fixed; bottom: 0; right: 0;">Заголовок с position: fixed</h3>
+			<div>А тут всякий разный текст... <br>... В две строки</div>
+		</div>
+	</main>
+</body>
+</html>

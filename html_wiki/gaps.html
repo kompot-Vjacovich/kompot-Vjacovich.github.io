@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Wiki</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/icon.png">
+	<style>
+		#big {
+			width: 500px;
+			height: 200px;
+			background: coral;
+			/*Внешние отступы*/
+			margin-left: 50px;
+			margin-top: 20px;
+			margin-bottom: 50px;
+			/*Внутринние отступы*/
+			padding-left: 20px;
+			padding-top:  50px;
+		}
+		#small {
+			width: 200px;
+			height: 100px;
+			background: rebeccapurple;
+		}
+	</style>
+</head>
+<body>
+	<!-- Шапка сайта -->
+	<header>
+		<a href="units.html"><img class="arrow" src="images/left_arrow.png" alt="Стрелка влево"></a>
+		<h1>Внутринние и внешние отступы</h1>
+		<a href="display.html"><img class="arrow" src="images/right_arrow.png" alt="Стрелка вправо"></a>
+	</header>
+
+	<!-- Основная часть сайта -->
+	<main>
+		<div id="big">
+			<div id="small"></div>
+		</div>
+		<h2>Сокращённая запись margin и padding</h2>
+		<ul>
+			<li><b>4 значения</b> - отступы: сверху, справа, снизу, слева</li>
+			<li><b>3 значения</b> - отступы: сверху, слева/справа, снизу</li>
+			<li><b>2 значения</b> - отступы: вертикальные, горизонтальные</li>
+			<li><b>1 значение</b> - одинаковые отступы для всех сторон</li>
+		</ul>
+	</main>
+</body>
+</html>
