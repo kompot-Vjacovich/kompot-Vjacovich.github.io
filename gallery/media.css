@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+	.img_link {
+		width: 100vw;
+		height: calc(100vw / 16*9);
+		margin: 3px 0;
+	}
+
+	main {width: 100vw;}
+}
+
+
+@media screen and (min-width: 1200px) {
+	.img_link:hover {
+		transform: scale(0.5) rotate(-15deg) translate(-200px, -100px);
+	}
+	.author:hover {border-color: #111;}
+}
